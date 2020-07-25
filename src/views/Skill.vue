@@ -1,38 +1,31 @@
 <template>
   <div class="skill" id="skill">
     <h1>Skill</h1>
-    <article>JavaScriptのフレームワークを中心に勉強中です。</article>
+    <p>JavaScriptのフレームワークを中心に勉強中です。</p>
     <div class="container">
       <p>
-        <img src="hoge.jpg" alt="””" />
+        <v-icon large>fab fa-html5</v-icon>
+        HTML5
       </p>
       <p>
-        <img src="hoge.jpg" alt="””" />
+        <v-icon large>fab fa-css3-alt</v-icon>
+        CSS
       </p>
       <p>
-        <img src="hoge.jpg" alt="””" />
+        <v-icon large>fab fa-js-square</v-icon>
+        Javascript
       </p>
       <p>
-        <img src="hoge.jpg" alt="””" />
-      </p>
-      <p>
-        <img src="hoge.jpg" alt="””" />
+        <v-icon large>fab fa-vuejs</v-icon>
+        Vue.js
       </p>
     </div>
-    <p class="btn">
-      <a href="consept.html">商品一覧</a>
-    </p>
   </div>
 </template>
 <script>
-import ProfileImage from "@/assets/img/profile.png";
 export default {
   name: "skill",
-  data() {
-    return {
-      ProfileImage: ProfileImage
-    };
-  }
+  data() {}
 };
 </script>
 <style scoped>
@@ -46,12 +39,6 @@ export default {
 #skill h1 {
   font-size: 2em;
   margin-bottom: 60px;
-}
-
-#skill article {
-  letter-spacing: 0.1em;
-  line-height: 1.8;
-  margin-bottom: 30px;
 }
 
 #skill .container {

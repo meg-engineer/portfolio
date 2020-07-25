@@ -3,26 +3,55 @@
     <h1>Portfolio</h1>
     <article>これまでに開発したアプリ,Webデザイン制作物です。</article>
     <div class="container">
-      <p>
-        <img src="hoge.jpg" alt="””" />
-      </p>
-      <p>
-        <img src="hoge.jpg" alt="””" />
-      </p>
-      <p>
-        <img src="hoge.jpg" alt="””" />
-      </p>
+      <div class="text-xs-center">
+        <v-btn
+          slot="activator"
+          color="red lighten-2"
+          @click="showDialog()"
+          dark
+        >
+          Kusuri
+        </v-btn>
+        <app-dialog ref="dialog"></app-dialog>
+      </div>
+      <div class="text-xs-center">
+        <v-btn
+          slot="activator"
+          color="red lighten-2"
+          @click="showDialogYatta()"
+          dark
+        >
+          YATTA!
+        </v-btn>
+        <yatta-dialog ref="dialogYatta"></yatta-dialog>
+      </div>
     </div>
+    <dialogYatta />
   </div>
 </template>
 <script>
-import ProfileImage from "@/assets/img/profile.png";
+import Dialog from "../components/DialogKusuri.vue";
+import DialogYatta from "../components/DialogYatta.vue";
+
 export default {
   name: "portfolio",
   data() {
     return {
-      ProfileImage: ProfileImage
+      dialog: false,
+      dialogYatta: false
     };
+  },
+  components: {
+    appDialog: Dialog,
+    yattaDialog: DialogYatta
+  },
+  methods: {
+    showDialog() {
+      this.$refs.dialog.open();
+    },
+    showDialogYatta() {
+      this.$refs.dialogYatta.open();
+    }
   }
 };
 </script>

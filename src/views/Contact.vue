@@ -1,0 +1,205 @@
+<template>
+  <div class="contact" id="contact">
+    <h1>Contact</h1>
+    <div class="container">
+      <div class="left-container">
+        <article>
+          ご質問、ご感想、お仕事のご相談等、
+          <br />お気軽にご寄せください。
+          <br />Twitterでもご連絡お待ちしております。
+        </article>
+      </div>
+      <div class="right-container">
+        <ContactForm />
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "contact"
+};
+</script>
+<style scoped>
+#contact {
+  width: 100%;
+  height: 500px;
+  background-color: #fafafa;
+  background-blend-mode: lighten;
+  position: relative;
+  padding: 130px 0;
+  text-align: center;
+}
+
+#contact .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 0;
+  padding-top: 100px;
+}
+#contact h1 {
+  width: 100%;
+  font-size: 2em;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#contact article {
+  margin-bottom: 35px;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+.left-container {
+  width: 30%;
+}
+.right-container {
+  width: 70%;
+}
+.form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+@media screen and (max-width: 480px) {
+  .Form {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: pink;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+}
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Btn {
+  border-radius: 8px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: pink;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+</style>

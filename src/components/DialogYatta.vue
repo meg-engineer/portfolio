@@ -19,6 +19,9 @@
         <v-divider></v-divider>
 
         <v-card-actions>
+          <v-btn text href="https://oiwai-9b69a.web.app/" target="_blank">
+            <v-icon large>far fa-pig</v-icon>見てみる</v-btn
+          >
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="dialogYatta = false">
             Close

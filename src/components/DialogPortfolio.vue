@@ -1,30 +1,29 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog v-model="dialogPortfolio" width="500">
       <v-card>
         <v-card-title class="headline grey lighten-2">
-          Kusuri
+          ポートフォリオサイト
         </v-card-title>
         <v-card-text>
-          日々のクスッと笑えるできごとをシェアできるチャットアプリです。
+          ポートフォリオサイトです。
           <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
             <li>Vue.js</li>
-            <li>Vuex</li>
+            <li>Adobe XD</li>
           </ul>
         </v-card-text>
 
         <v-divider></v-divider>
 
         <v-card-actions>
-          <v-btn text href="https://kusuri-chat.web.app//" target="_blank">
-            <v-icon large>far fa-pig</v-icon>見てみる</v-btn
-          >
+          <!-- <v-btn text @click="$vuetify.goTo(0)">
+            <v-icon large>far fa-pig</v-icon>サイトトップへ</v-btn
+          > -->
           <v-spacer></v-spacer>
-
-          <v-btn color="primary" text @click="dialog = false">
+          <v-btn color="primary" text @click="dialogPortfolio = false">
             Close
           </v-btn>
         </v-card-actions>
@@ -36,15 +35,15 @@
 export default {
   data() {
     return {
-      dialog: false
+      dialogPortfolio: false
     };
   },
   methods: {
     open() {
-      this.dialog = true;
+      this.dialogPortfolio = true;
     },
     close() {
-      this.dialog = false;
+      this.dialogPortfolio = false;
     }
   }
 };

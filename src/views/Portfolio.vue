@@ -25,25 +25,38 @@
         </v-btn>
         <yatta-dialog ref="dialogYatta"></yatta-dialog>
       </div>
+      <div class="text-xs-center">
+        <v-btn
+          slot="activator"
+          color="red lighten-2"
+          @click="showDialogPortfolio()"
+          dark
+        >
+          ポートフォリオサイト
+        </v-btn>
+        <po-dialog ref="dialogPortfolio"></po-dialog>
+      </div>
     </div>
-    <dialogYatta />
   </div>
 </template>
 <script>
 import Dialog from "../components/DialogKusuri.vue";
 import DialogYatta from "../components/DialogYatta.vue";
+import DialogPortfolio from "../components/DialogPortfolio.vue";
 
 export default {
   name: "portfolio",
   data() {
     return {
       dialog: false,
-      dialogYatta: false
+      dialogYatta: false,
+      dialogPortfolio: false
     };
   },
   components: {
     appDialog: Dialog,
-    yattaDialog: DialogYatta
+    yattaDialog: DialogYatta,
+    poDialog: DialogPortfolio
   },
   methods: {
     showDialog() {
@@ -51,6 +64,9 @@ export default {
     },
     showDialogYatta() {
       this.$refs.dialogYatta.open();
+    },
+    showDialogPortfolio() {
+      this.$refs.dialogPortfolio.open();
     }
   }
 };

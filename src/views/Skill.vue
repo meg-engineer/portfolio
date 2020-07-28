@@ -2,36 +2,69 @@
   <div class="skill" id="skill">
     <h1>Skill</h1>
     <p>JavaScriptのフレームワークを中心に勉強中です。</p>
-    <div class="container">
-      <p>
-        <v-icon large>fab fa-html5</v-icon>
-        HTML5
-      </p>
-      <p>
-        <v-icon large>fab fa-css3-alt</v-icon>
-        CSS
-      </p>
-      <p>
-        <v-icon large>fab fa-js-square</v-icon>
-        Javascript
-      </p>
-      <p>
-        <v-icon large>fab fa-vuejs</v-icon>
-        Vue.js
-      </p>
-    </div>
+    <!-- <v-container>
+      <v-row>
+        <v-col cols="2.4">
+          <v-icon x-large>fab fa-html5</v-icon>HTML5
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon x-large>fab fa-css3-alt</v-icon>CSS
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-js-square</v-icon>Javascript
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-vuejs</v-icon>Vue.js
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-vuejs</v-icon>Vuex
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-adobe</v-icon>AdobeXD
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-adobe</v-icon>Adobe Photoshop
+        </v-col>
+        <v-col cols="2.4">
+          <v-icon large>fab fa-adobe</v-icon>Adobe Illustrator
+        </v-col>
+      </v-row>
+    </v-container>-->
+    <FadeIn>
+      <div class="flexbox">
+        <div class="item"><v-icon x-large>fab fa-html5</v-icon>HTML5</div>
+        <div class="item"><v-icon x-large>fab fa-css3-alt</v-icon>CSS</div>
+        <div class="item">
+          <v-icon large>fab fa-js-square</v-icon>Javascript
+        </div>
+        <div class="item"><v-icon large>fab fa-vuejs</v-icon>Vue.js</div>
+        <div class="item"><v-icon large>fab fa-vuejs</v-icon>Vuex</div>
+        <div class="item"><v-icon large>fab fa-adobe</v-icon>AdobeXD</div>
+        <div class="item">
+          <v-icon large>fab fa-adobe</v-icon>Adobe Photoshop
+        </div>
+        <div class="item">
+          <v-icon large>fab fa-adobe</v-icon>Adobe Illustrator
+        </div>
+      </div>
+    </FadeIn>
   </div>
 </template>
 <script>
+import FadeIn from "../components/FadeIn";
+
 export default {
   name: "skill",
-  data() {}
+  components: {
+    FadeIn
+  }
 };
 </script>
 <style scoped>
 #skill {
   width: 100%;
-  text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -39,12 +72,37 @@ export default {
 #skill h1 {
   font-size: 2em;
   margin-bottom: 60px;
+  text-align: center;
 }
 
-#skill .container {
-  display: flex;
-  width: 980px;
-  justify-content: space-between;
-  margin: 0 auto 65px;
+#skill p {
+  text-align: center;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .flexbox {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 65px;
+  }
+  .item {
+    width: 20%;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flexbox {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 65px;
+  }
+  .item {
+    width: 50%;
+    margin-top: 30px;
+  }
 }
 </style>

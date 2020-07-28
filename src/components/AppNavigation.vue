@@ -1,42 +1,49 @@
 <template>
-  <div class="navigation-bar">
-    <v-btn text large style="text-transform: none" @click="$vuetify.goTo(0)"
-      >Home</v-btn
-    >
-    <v-btn
-      text
-      large
-      style="text-transform: none"
-      @click="$vuetify.goTo('#about', options)"
-      >About</v-btn
-    >
-    <v-btn
-      text
-      large
-      style="text-transform: none"
-      @click="$vuetify.goTo('#portfolio', options)"
-      >Portfolio</v-btn
-    >
-    <v-btn
-      text
-      large
-      style="text-transform: none"
-      @click="$vuetify.goTo('#skill', options)"
-      >Skill</v-btn
-    >
-    <v-btn
-      text
-      large
-      style="text-transform: none"
-      @click="$vuetify.goTo('#contact', options)"
-      >Contact</v-btn
-    >
-  </div>
+  <FadeIn>
+    <div class="navigation-bar">
+      <v-btn text large style="text-transform: none" @click="$vuetify.goTo(0)"
+        >Home</v-btn
+      >
+      <v-btn
+        text
+        large
+        style="text-transform: none"
+        @click="$vuetify.goTo('#about', options)"
+        >About</v-btn
+      >
+      <v-btn
+        text
+        large
+        style="text-transform: none"
+        @click="$vuetify.goTo('#portfolio', options)"
+        >Portfolio</v-btn
+      >
+      <v-btn
+        text
+        large
+        style="text-transform: none"
+        @click="$vuetify.goTo('#skill', options)"
+        >Skill</v-btn
+      >
+      <v-btn
+        text
+        large
+        style="text-transform: none"
+        @click="$vuetify.goTo('#contact', options)"
+        >Contact</v-btn
+      >
+    </div>
+  </FadeIn>
 </template>
 
 <script>
+import FadeIn from "@/components/FadeIn";
+
 export default {
-  name: "AppNavigation"
+  name: "AppNavigation",
+  components: {
+    FadeIn
+  }
 };
 </script>
 

@@ -14,7 +14,7 @@ export default {
 <style scoped>
 #home {
   width: 100%;
-  height: 720px;
+  height: 900px;
   background-image: url(../assets/img/main.jpg);
   text-align: center;
 }

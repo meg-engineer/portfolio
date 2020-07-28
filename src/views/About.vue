@@ -1,6 +1,7 @@
 <template>
   <div class="about" id="about">
     <h1>About ME</h1>
+
     <div class="container">
       <div class="right-container">
         <FadeRight>
@@ -39,7 +40,7 @@ export default {
   width: 100%;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 #about h1 {

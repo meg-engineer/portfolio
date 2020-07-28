@@ -1,8 +1,12 @@
 <template>
   <div class="home" id="home">
-    <div>
-      <h1>Meg's Portfolio</h1>
-    </div>
+    <v-parallax height="700" src="@/assets/img/home.jpg">
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 font-weight-thin mb-4">Meg's Portfolio</h1>
+        </v-col>
+      </v-row>
+    </v-parallax>
   </div>
 </template>
 
@@ -12,19 +16,8 @@ export default {
 };
 </script>
 <style scoped>
-#home {
+/* #home {
   width: 100%;
-  height: 900px;
-  background-image: url(../assets/img/main.jpg);
   text-align: center;
-}
-
-#home h1 {
-  width: 100%;
-  margin-top: 300px;
-  color: white;
-  font-size: 80px;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-}
+} */
 </style>

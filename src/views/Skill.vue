@@ -1,6 +1,8 @@
 <template>
   <div class="skill" id="skill">
-    <h1>Skill</h1>
+    <FadeIn>
+      <h1>Skill</h1>
+    </FadeIn>
     <p>JavaScriptのフレームワークを中心に勉強中です。</p>
     <!-- <v-container>
       <v-row>

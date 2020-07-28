@@ -1,9 +1,23 @@
 <template>
   <v-app>
+    <!-- スクロールしたらTopボタン表示 -->
+    <v-btn
+      v-scroll="onScroll"
+      v-show="fab"
+      fab
+      fixed
+      bottom
+      right
+      color="gray"
+      @click="toTop"
+    >
+      <v-icon>fas fa-angle-up</v-icon>
+    </v-btn>
+    <!-- Menuここまで -->
     <Home />
-    <FadeIn>
-      <AppNavigation />
-    </FadeIn>
+
+    <AppNavigation />
+
     <About />
     <portfolio />
     <Skill />
@@ -13,7 +27,6 @@
 </template>
 
 <script>
-import FadeIn from "@/components/FadeIn";
 import AppNavigation from "@/components/AppNavigation";
 import Footer from "@/components/Footer";
 import Home from "@/views/Home";
@@ -26,7 +39,6 @@ export default {
   name: "App",
 
   components: {
-    FadeIn,
     AppNavigation,
     Footer,
     Home,
@@ -35,10 +47,21 @@ export default {
     Skill,
     Contact
   },
-
-  data: () => ({
-    //
-  })
+  data: () => {
+    return {
+      fab: false
+    };
+  },
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 500;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    }
+  }
 };
 </script>
 <style>

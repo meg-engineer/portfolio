@@ -21,7 +21,7 @@ export default {
     handleScroll() {
       if (!this.visible) {
         var top = this.$el.getBoundingClientRect().top;
-        this.visible = top < window.innerHeight + 200;
+        this.visible = top < window.innerHeight + 500;
       }
     }
   }
@@ -36,11 +36,9 @@ export default {
 @keyframes fadein {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 </style>

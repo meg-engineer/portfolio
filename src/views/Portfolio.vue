@@ -1,17 +1,13 @@
 <template>
   <div class="portfolio" id="portfolio">
     <h1>Portfolio</h1>
+
     <article>これまでに開発したアプリ,Webデザイン制作物です。</article>
     <div class="container">
       <div class="text-xs-center">
-        <v-btn
-          slot="activator"
-          color="red lighten-2"
-          @click="showDialog()"
-          dark
+        <v-btn slot="activator" color="red lighten-2" @click="showDialog()" dark
+          >Kusuri</v-btn
         >
-          Kusuri
-        </v-btn>
         <app-dialog ref="dialog"></app-dialog>
       </div>
       <div class="text-xs-center">
@@ -20,9 +16,8 @@
           color="red lighten-2"
           @click="showDialogYatta()"
           dark
+          >YATTA!</v-btn
         >
-          YATTA!
-        </v-btn>
         <yatta-dialog ref="dialogYatta"></yatta-dialog>
       </div>
       <div class="text-xs-center">
@@ -31,18 +26,17 @@
           color="red lighten-2"
           @click="showDialogPortfolio()"
           dark
+          >ポートフォリオサイト</v-btn
         >
-          ポートフォリオサイト
-        </v-btn>
         <po-dialog ref="dialogPortfolio"></po-dialog>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Dialog from "../components/DialogKusuri.vue";
-import DialogYatta from "../components/DialogYatta.vue";
-import DialogPortfolio from "../components/DialogPortfolio.vue";
+import Dialog from "@/components/DialogKusuri.vue";
+import DialogYatta from "@/components/DialogYatta.vue";
+import DialogPortfolio from "@/components/DialogPortfolio.vue";
 
 export default {
   name: "portfolio",

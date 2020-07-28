@@ -1,44 +1,38 @@
 <template>
   <div>
-    <v-card>
-      <v-container>
-        <h2>お問い合わせ</h2>
-        <v-form
-          ref="form"
-          v-model="contactFormValidation.valid"
-          lazy-validation
+    <v-container>
+      <v-form ref="form" v-model="contactFormValidation.valid" lazy-validation>
+        <v-text-field
+          v-model="contactForm.name"
+          :rules="contactFormValidation.nameRules"
+          label="名前"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="contactForm.email"
+          :rules="contactFormValidation.emailRules"
+          label="メールアドレス"
+          required
+        ></v-text-field>
+        <v-textarea
+          v-model="contactForm.contents"
+          :rules="contactFormValidation.contentsRules"
+          label="内容"
+          required
+          rows="3"
+        ></v-textarea>
+        <v-btn
+          :loading="contactForm.loading"
+          :disabled="!contactFormValidation.valid"
+          @click="sendMail()"
+          block
+          color="#cc3366"
+          class="mt-4 font-weight-bold"
+          >送信</v-btn
         >
-          <v-text-field
-            v-model="contactForm.name"
-            :rules="contactFormValidation.nameRules"
-            label="名前"
-            required
-          ></v-text-field>
-          <v-text-field
-            v-model="contactForm.email"
-            :rules="contactFormValidation.emailRules"
-            label="メールアドレス"
-            required
-          ></v-text-field>
-          <v-textarea
-            v-model="contactForm.contents"
-            :rules="contactFormValidation.contentsRules"
-            label="内容"
-            required
-          ></v-textarea>
-          <v-btn
-            :loading="contactForm.loading"
-            :disabled="!contactFormValidation.valid"
-            @click="sendMail()"
-            block
-            large
-            color="info"
-            class="mt-4 font-weight-bold"
-            >送信</v-btn
-          >
-        </v-form>
-      </v-container>
-    </v-card>
+      </v-form>
+    </v-container>
+
     <v-snackbar
       v-model="snackBar.show"
       :color="snackBar.color"
@@ -53,7 +47,6 @@
 
 <script>
 import { functions } from "@/plugins/firebase";
-
 export default {
   data: () => ({
     contactForm: {
@@ -111,3 +104,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+v-form {
+  height: 300px;
+}
+</style>

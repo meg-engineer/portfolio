@@ -13,11 +13,12 @@
     >
       <v-icon>fas fa-angle-up</v-icon>
     </v-btn>
-    <!-- Menuここまで -->
+    <!-- Topボタンここまで -->
     <Home />
-
-    <AppNavigation />
-
+    <!-- スクロールしたらMenu固定 -->
+    <div v-scroll="onScroll" :class="{ fixed: fab }">
+      <AppNavigation />
+    </div>
     <About />
     <portfolio />
     <Skill />
@@ -56,7 +57,7 @@ export default {
     onScroll(e) {
       if (typeof window === "undefined") return;
       const top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > 500;
+      this.fab = top > 700;
     },
     toTop() {
       this.$vuetify.goTo(0);
@@ -66,4 +67,11 @@ export default {
 </script>
 <style>
 @import "assets/css/reset.css";
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
 </style>

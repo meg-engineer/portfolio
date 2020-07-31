@@ -42,10 +42,9 @@ export default {
 
 <style scoped>
 .navigation-bar {
-  background: rgba(250, 250, 250, 0.5);
+  background: rgba(250, 250, 250);
   text-align: center;
-  margin-top: 15px;
-  padding-bottom: 50px;
+  padding: 10px;
 }
 v-btn {
   color: black;

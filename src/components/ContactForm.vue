@@ -25,11 +25,13 @@
           :loading="contactForm.loading"
           :disabled="!contactFormValidation.valid"
           @click="sendMail()"
-          block
-          color="#cc3366"
-          class="mt-4 font-weight-bold"
-          >送信</v-btn
+          class="ma-2"
+          tile
+          outlined
+          color="brown darken-3"
         >
+          <v-icon left>fas fa-paper-plane</v-icon> 送信
+        </v-btn>
       </v-form>
     </v-container>
 

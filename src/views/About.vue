@@ -1,22 +1,26 @@
 <template>
   <div class="about" id="about">
     <h1>About ME</h1>
-
-    <div class="container">
-      <div class="right-container">
-        <FadeRight>
-          <v-img :src="imageURL" aspect-ratio="1.7"></v-img>
-        </FadeRight>
-      </div>
-      <div class="left container">
-        <FadeLeft>
-          <article class="text">
-            法律事務、行政職を経て独学でWebデザイン、プログラミングの勉強をはじめる。
-            <br />”相手に寄り添う”ことのできるフロントエンドエンジニアを目指し、日々奮闘中です。
-          </article>
-        </FadeLeft>
-      </div>
-    </div>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" md="auto">
+          <FadeRight>
+            <v-avatar size="240">
+              <v-img :src="imageURL" aspect-ratio="1" light></v-img>
+            </v-avatar>
+          </FadeRight>
+        </v-col>
+        <v-col cols="12" md="auto">
+          <FadeLeft>
+            <h2>Megumi Tanimoto</h2>
+            <article>
+              法律事務、行政職を経て独学でWebデザイン、プログラミングの勉強をはじめる。
+              <br />”相手に寄り添う”ことのできるフロントエンドエンジニアを目指し、日々奮闘中です。
+            </article>
+          </FadeLeft>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -26,7 +30,7 @@ import FadeLeft from "@/components/FadeLeft";
 export default {
   data() {
     return {
-      imageURL: require("@/assets/img/download.jpg")
+      imageURL: require("@/assets/img/me.png")
     };
   },
   components: {
@@ -38,42 +42,24 @@ export default {
 <style scoped>
 #about {
   width: 100%;
-  text-align: center;
   padding-top: 100px;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 #about h1 {
   font-size: 2em;
 }
 
-#about .container {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin-top: 0;
-  padding-top: 100px;
-}
-
-#about .container .right-container {
-  width: 50%;
-}
-
-#about .container .left-container {
-  width: 50%;
-}
-#about .container h1 {
-  width: 100%;
-  font-size: 2em;
-  margin-bottom: 60px;
-  text-align: center;
+#about h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
 }
 
 #about article {
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 30px;
 }
 
 .fadeIn {

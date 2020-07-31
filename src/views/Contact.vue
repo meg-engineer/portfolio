@@ -3,14 +3,14 @@
     <h1>Contact</h1>
     <v-container>
       <v-row>
-        <v-col>
+        <v-col cols="12" md="6">
           <article>
             ご質問、ご感想、お仕事のご相談等、
             <br />お気軽にご寄せください。
             <br />Twitterでもご連絡お待ちしております。
-          </article></v-col
-        >
-        <v-col> <ContactForm /></v-col>
+          </article>
+        </v-col>
+        <v-col cols="12" md="6"> <ContactForm /></v-col>
       </v-row>
     </v-container>
   </div>
@@ -40,7 +40,6 @@ export default {
 }
 
 #contact article {
-  position: absolute;
   letter-spacing: 0.1em;
   line-height: 2;
   text-align: center;

@@ -1,56 +1,117 @@
 <template>
   <div class="skill" id="skill">
+    <h1>Skill</h1>
     <FadeIn>
-      <h1>Skill</h1>
-    </FadeIn>
-    <p>JavaScriptのフレームワークを中心に勉強中です。</p>
-    <!-- <v-container>
-      <v-row>
-        <v-col cols="2.4">
-          <v-icon x-large>fab fa-html5</v-icon>HTML5
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon x-large>fab fa-css3-alt</v-icon>CSS
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-js-square</v-icon>Javascript
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-vuejs</v-icon>Vue.js
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-vuejs</v-icon>Vuex
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-adobe</v-icon>AdobeXD
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-adobe</v-icon>Adobe Photoshop
-        </v-col>
-        <v-col cols="2.4">
-          <v-icon large>fab fa-adobe</v-icon>Adobe Illustrator
-        </v-col>
-      </v-row>
-    </v-container>-->
-    <FadeIn>
-      <div class="flexbox">
-        <div class="item"><v-icon x-large>fab fa-html5</v-icon>HTML5</div>
-        <div class="item"><v-icon x-large>fab fa-css3-alt</v-icon>CSS</div>
-        <div class="item">
-          <v-icon large>fab fa-js-square</v-icon>Javascript
-        </div>
-        <div class="item"><v-icon large>fab fa-vuejs</v-icon>Vue.js</div>
-        <div class="item"><v-icon large>fab fa-vuejs</v-icon>Vuex</div>
-        <div class="item"><v-icon large>fab fa-adobe</v-icon>AdobeXD</div>
-        <div class="item">
-          <v-icon large>fab fa-adobe</v-icon>Adobe Photoshop
-        </div>
-        <div class="item">
-          <v-icon large>fab fa-adobe</v-icon>Adobe Illustrator
-        </div>
-      </div>
+      <v-container>
+        <v-row class="fill-height d-flex">
+          <template>
+            <v-col cols="12" md="4">
+              <v-card flat class="mx-auto">
+                <v-card-title class="title">
+                  <v-row
+                    class="fill-height flex-column"
+                    justify="space-between"
+                  >
+                    <v-title class="subheading text-left mb-8"
+                      >フロントエンド</v-title
+                    >
+
+                    <v-text>
+                      <p class="text-left">言語</p>
+                      <ul class="font-weight-light mb-6">
+                        <li>
+                          <v-avatar size="36"><img :src="htmlicon"/></v-avatar
+                          >HTML5
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="cssicon"/></v-avatar
+                          >CSS
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="jsicon"/></v-avatar
+                          >JavaScript
+                        </li>
+                      </ul>
+
+                      <p class="text-left">フレームワーク</p>
+                      <ul class="font-weight-light">
+                        <li>
+                          <v-avatar size="36"><img :src="jqicon"/></v-avatar
+                          >jQuery
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
+                          >Vue.js
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
+                          >Vuex
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
+                          >Vuetify
+                        </li>
+                      </ul>
+                    </v-text>
+                  </v-row>
+                </v-card-title>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card flat>
+                <v-card-title class="title">
+                  <v-row
+                    class="fill-height flex-column"
+                    justify="space-between"
+                  >
+                    <p class="subheading text-left mb-8">Webデザイン</p>
+
+                    <div>
+                      <ul class="font-weight-light">
+                        <li>
+                          <v-avatar size="36"><img :src="xdicon"/></v-avatar
+                          >AsobeXD
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="psicon"/></v-avatar
+                          >Adobe Photoshop
+                        </li>
+                        <li>
+                          <v-avatar size="36"><img :src="ilicon"/></v-avatar
+                          >Adobe Illustrator
+                        </li>
+                      </ul>
+                    </div>
+                  </v-row>
+                </v-card-title>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card flat>
+                <v-card-title class="title">
+                  <v-row
+                    class="fill-height flex-column"
+                    justify="space-between"
+                  >
+                    <p class="subheading text-left mb-8">
+                      インフラ,バックエンド
+                    </p>
+
+                    <div>
+                      <ul class="font-weight-light">
+                        <li>
+                          <v-avatar size="36"><img :src="fbicon"/></v-avatar
+                          >Firebase
+                        </li>
+                      </ul>
+                    </div>
+                  </v-row>
+                </v-card-title>
+              </v-card>
+            </v-col>
+          </template>
+        </v-row>
+      </v-container>
     </FadeIn>
   </div>
 </template>
@@ -59,6 +120,19 @@ import FadeIn from "../components/FadeIn";
 
 export default {
   name: "skill",
+  data() {
+    return {
+      htmlicon: require("@/assets/img/icon/html.png"),
+      cssicon: require("@/assets/img/icon/css.png"),
+      jsicon: require("@/assets/img/icon/js.png"),
+      jqicon: require("@/assets/img/icon/jq.png"),
+      vueicon: require("@/assets/img/icon/vue.png"),
+      xdicon: require("@/assets/img/icon/xd.png"),
+      psicon: require("@/assets/img/icon/ps.png"),
+      ilicon: require("@/assets/img/icon/il.png"),
+      fbicon: require("@/assets/img/icon/firebase.png")
+    };
+  },
   components: {
     FadeIn
   }
@@ -81,30 +155,7 @@ export default {
   text-align: center;
 }
 
-/* Responsive */
-@media (min-width: 600px) {
-  .flexbox {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto 65px;
-  }
-  .item {
-    width: 20%;
-    margin-top: 30px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .flexbox {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto 65px;
-  }
-  .item {
-    width: 50%;
-    margin-top: 30px;
-  }
+ul {
+  list-style: none;
 }
 </style>

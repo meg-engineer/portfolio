@@ -2,26 +2,21 @@
   <div>
     <v-dialog v-model="dialogPortfolio" width="500">
       <v-card>
-        <v-card-title class="headline grey lighten-2">
+        <v-card-title>
           ポートフォリオサイト
         </v-card-title>
         <v-card-text>
-          ポートフォリオサイトです。
+          現在閲覧されているポートフォリオサイトです。<br />
+          <br />
+          環境開発
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Vue.js</li>
-            <li>Adobe XD</li>
+            <li>OS : mac</li>
+            <li>言語 : HTML,CSS,JavaScript</li>
+            <li>FW : Vue.js,Vuetify</li>
+            <li>DB : Firebase</li>
           </ul>
         </v-card-text>
-
-        <v-divider></v-divider>
-
         <v-card-actions>
-          <!-- <v-btn text @click="$vuetify.goTo(0)">
-            <v-icon large>far fa-pig</v-icon>サイトトップへ</v-btn
-          > -->
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="dialogPortfolio = false">
             Close

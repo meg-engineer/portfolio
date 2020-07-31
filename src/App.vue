@@ -23,7 +23,10 @@
     <portfolio />
     <Skill />
     <Contact />
-    <Footer />
+    <!-- スクロールしたらFooter固定 -->
+    <div v-scroll="onScroll" :class="{ footer: fab }">
+      <Footer />
+    </div>
   </v-app>
 </template>
 
@@ -73,5 +76,12 @@ export default {
   left: 0;
   width: 100%;
   z-index: 10;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 </style>

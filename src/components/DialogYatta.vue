@@ -2,25 +2,23 @@
   <div>
     <v-dialog v-model="dialogYatta" width="500">
       <v-card>
-        <v-card-title class="headline grey lighten-2">
+        <v-card-title>
           YATTA!
         </v-card-title>
         <v-card-text>
-          嬉しい出来事をイラストカードにして、Twitterでシェアできるアプリです。
+          嬉しい出来事をイラストカードにして、Twitterでシェアできるアプリです。<br />
+          <br />
+          環境開発
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Vue.js</li>
-            <li>Adobe Illustrator</li>
+            <li>OS : mac</li>
+            <li>言語 : HTML,CSS,JavaScript</li>
+            <li>FW : Vue.js,Vuetify</li>
+            <li>DB : Firebase</li>
           </ul>
         </v-card-text>
-
-        <v-divider></v-divider>
-
         <v-card-actions>
           <v-btn text href="https://oiwai-9b69a.web.app/" target="_blank">
-            <v-icon large>far fa-pig</v-icon>見てみる</v-btn
+            <v-icon large>far fa-pig</v-icon>アプリを見る</v-btn
           >
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="dialogYatta = false">

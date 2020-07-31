@@ -12,10 +12,13 @@
         </v-col>
         <v-col cols="12" md="auto">
           <FadeLeft>
-            <h2>Megumi Tanimoto</h2>
+            <h2 class="mb-5">Megumi Tanimoto</h2>
             <article>
-              法律事務、行政職を経て独学でWebデザイン、プログラミングの勉強をはじめる。
-              <br />”相手に寄り添う”ことのできるフロントエンドエンジニアを目指し、日々奮闘中です。
+              山口県生まれ。<br />
+
+              大学卒業後、法律事務、公務員を経てプログラミングとWebデザインの勉強を始める。<br />
+
+              UI/UXを意識したデザインの設計からモダンなフロントエンド開発ができるエンジニアを目指し日々勉強中です。
             </article>
           </FadeLeft>
         </v-col>
@@ -42,13 +45,13 @@ export default {
 <style scoped>
 #about {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 200px;
-  text-align: center;
 }
 
 #about h1 {
   font-size: 2em;
+  text-align: center;
 }
 
 #about h2 {

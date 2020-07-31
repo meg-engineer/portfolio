@@ -5,6 +5,7 @@
         href="https://github.com/meg-engineer"
         target="_blank"
         class="ma-2"
+        color="black"
         text
         icon
       >
@@ -14,6 +15,7 @@
         href="https://twitter.com/MegEngineer"
         target="_blank"
         class="ma-2"
+        color="rgb(29,161,242)"
         text
         icon
       >

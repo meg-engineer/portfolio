@@ -2,40 +2,11 @@
   <div class="portfolio" id="portfolio">
     <h1>Portfolio</h1>
 
-    <article>これまでに開発したアプリ,Webデザイン制作物です。</article>
+    <article>これまでに開発したアプリ、Webデザイン制作物です。</article>
 
     <v-container class="pa-4 text-center">
       <v-row class="fill-height" align="center" justify="center">
         <template>
-          <v-col cols="12" md="4">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                :elevation="hover ? 12 : 2"
-                :class="{ 'on-hover': hover }"
-                @click="showDialog()"
-              >
-                <v-img :src="kusuriimage" height="225px">
-                  <v-card-title class="title white--text">
-                    <v-row
-                      class="fill-height flex-column"
-                      justify="space-between"
-                    >
-                      <p class="mt-4 subheading text-left">Kusuri</p>
-
-                      <div>
-                        <p
-                          class="ma-0 body-1 font-weight-thin font-italic text-left"
-                        >
-                          日々のクスッと笑える出来事をシェアできるアプリ
-                        </p>
-                      </div>
-                    </v-row>
-                  </v-card-title>
-                </v-img>
-                <app-dialog ref="dialog"></app-dialog>
-              </v-card>
-            </v-hover>
-          </v-col>
           <v-col cols="12" md="4">
             <v-hover v-slot:default="{ hover }">
               <v-card
@@ -70,6 +41,36 @@
               <v-card
                 :elevation="hover ? 12 : 2"
                 :class="{ 'on-hover': hover }"
+                @click="showDialog()"
+              >
+                <v-img :src="kusuriimage" height="225px">
+                  <v-card-title class="title white--text">
+                    <v-row
+                      class="fill-height flex-column"
+                      justify="space-between"
+                    >
+                      <p class="mt-4 subheading text-left">Kusuri</p>
+
+                      <div>
+                        <p
+                          class="ma-0 body-1 font-weight-thin font-italic text-left"
+                        >
+                          日々のクスッと笑える出来事をシェアできるアプリ
+                        </p>
+                      </div>
+                    </v-row>
+                  </v-card-title>
+                </v-img>
+                <app-dialog ref="dialog"></app-dialog>
+              </v-card>
+            </v-hover>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                :elevation="hover ? 12 : 2"
+                :class="{ 'on-hover': hover }"
                 @click="showDialogPortfolio()"
               >
                 <v-img :src="siteimage" height="225px">
@@ -94,16 +95,16 @@
   </div>
 </template>
 <script>
-import Dialog from "@/components/DialogKusuri.vue";
 import DialogYatta from "@/components/DialogYatta.vue";
+import Dialog from "@/components/DialogKusuri.vue";
 import DialogPortfolio from "@/components/DialogPortfolio.vue";
 
 export default {
   name: "portfolio",
   data() {
     return {
-      dialog: false,
       dialogYatta: false,
+      dialog: false,
       dialogPortfolio: false,
       kusuriimage: require("@/assets/img/kusuri.jpg"),
       yattaimage: require("@/assets/img/yatta.png"),
@@ -112,16 +113,16 @@ export default {
     };
   },
   components: {
-    appDialog: Dialog,
     yattaDialog: DialogYatta,
+    appDialog: Dialog,
     poDialog: DialogPortfolio
   },
   methods: {
-    showDialog() {
-      this.$refs.dialog.open();
-    },
     showDialogYatta() {
       this.$refs.dialogYatta.open();
+    },
+    showDialog() {
+      this.$refs.dialog.open();
     },
     showDialogPortfolio() {
       this.$refs.dialogPortfolio.open();
@@ -150,10 +151,10 @@ export default {
 }
 
 .v-card {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.6 ease-in-out;
 }
 
 .v-card:not(.on-hover) {
-  opacity: 0.6;
+  opacity: 0.4s;
 }
 </style>

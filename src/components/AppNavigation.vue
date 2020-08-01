@@ -4,7 +4,7 @@
       <v-col cols="12" class="pa-0">
         <v-toolbar color="rgba(250, 250, 250)" class="px-10 elevation-0">
           <v-row align="center" justify="center" color="rgba(250, 250, 250)">
-            <v-toolbar-items class="hidden-sm-and-down">
+            <div class="hidden-sm-and-down">
               <v-btn
                 text
                 x-large
@@ -40,9 +40,9 @@
                 @click="$vuetify.goTo('#contact', options)"
                 >Contact</v-btn
               >
-            </v-toolbar-items>
+            </div>
             <!-- ここからレスポンシブ対応 -->
-            <v-toolbar-icon class="hidden-md-and-up">
+            <div class="hidden-md-and-up">
               <v-btn
                 text
                 small
@@ -71,7 +71,7 @@
                 @click="$vuetify.goTo('#contact', options)"
                 >Contact</v-btn
               >
-            </v-toolbar-icon>
+            </div>
           </v-row>
         </v-toolbar>
       </v-col>

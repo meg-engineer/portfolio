@@ -20,15 +20,16 @@
                       <p class="text-left">言語</p>
                       <ul class="font-weight-light mb-6">
                         <li>
-                          <v-avatar size="36"><img :src="htmlicon"/></v-avatar
+                          <v-avatar size="36">
+                            <img :src="htmlicon" /> </v-avatar
                           >HTML5
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="cssicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="cssicon" /> </v-avatar
                           >CSS
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="jsicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="jsicon" /> </v-avatar
                           >JavaScript
                         </li>
                       </ul>
@@ -36,20 +37,16 @@
                       <p class="text-left">フレームワーク</p>
                       <ul class="font-weight-light">
                         <li>
-                          <v-avatar size="36"><img :src="jqicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="jqicon" /> </v-avatar
                           >jQuery
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
                           >Vue.js
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
                           >Vuex
-                        </li>
-                        <li>
-                          <v-avatar size="36"><img :src="vueicon"/></v-avatar
-                          >Vuetify
                         </li>
                       </ul>
                     </v-text>
@@ -69,15 +66,15 @@
                     <div>
                       <ul class="font-weight-light">
                         <li>
-                          <v-avatar size="36"><img :src="xdicon"/></v-avatar
-                          >AsobeXD
+                          <v-avatar size="36"> <img :src="xdicon" /> </v-avatar
+                          >Adobe XD
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="psicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="psicon" /> </v-avatar
                           >Adobe Photoshop
                         </li>
                         <li>
-                          <v-avatar size="36"><img :src="ilicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="ilicon" /> </v-avatar
                           >Adobe Illustrator
                         </li>
                       </ul>
@@ -94,13 +91,13 @@
                     justify="space-between"
                   >
                     <p class="subheading text-left mb-8">
-                      インフラ,バックエンド
+                      インフラ・バックエンド
                     </p>
 
                     <div>
                       <ul class="font-weight-light">
                         <li>
-                          <v-avatar size="36"><img :src="fbicon"/></v-avatar
+                          <v-avatar size="36"> <img :src="fbicon" /> </v-avatar
                           >Firebase
                         </li>
                       </ul>

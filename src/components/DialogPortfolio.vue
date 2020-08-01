@@ -2,13 +2,11 @@
   <div>
     <v-dialog v-model="dialogPortfolio" width="500">
       <v-card>
-        <v-card-title>
-          ポートフォリオサイト
-        </v-card-title>
+        <v-card-title>ポートフォリオサイト</v-card-title>
         <v-card-text>
-          現在閲覧されているポートフォリオサイトです。<br />
+          現在閲覧されているポートフォリオサイトです。
           <br />
-          環境開発
+          <br />開発環境
           <ul>
             <li>OS : mac</li>
             <li>言語 : HTML,CSS,JavaScript</li>
@@ -18,9 +16,9 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="dialogPortfolio = false">
-            Close
-          </v-btn>
+          <v-btn color="primary" text @click="dialogPortfolio = false"
+            >閉じる</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>

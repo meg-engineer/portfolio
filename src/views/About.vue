@@ -3,7 +3,7 @@
     <h1>About ME</h1>
     <v-container>
       <v-row justify="center">
-        <v-col cols="12" md="auto">
+        <v-col cols="12" md="auto" class="about-img">
           <FadeRight>
             <v-avatar size="240">
               <v-img :src="imageURL" aspect-ratio="1" light></v-img>
@@ -14,11 +14,9 @@
           <FadeLeft>
             <h2 class="mb-5">Megumi Tanimoto</h2>
             <article>
-              山口県生まれ。<br />
-
-              大学卒業後、法律事務、公務員を経てプログラミングとWebデザインの勉強を始める。<br />
-
-              UI/UXを意識したデザインの設計からモダンなフロントエンド開発ができるエンジニアを目指し日々勉強中です。
+              山口県生まれ。
+              <br />大学卒業後、法律事務、公務員を経てプログラミングとWebデザインの勉強を始める。
+              <br />UI/UXを意識したデザインの設計からモダンなフロントエンド開発ができるエンジニアを目指し日々勉強中です。
             </article>
           </FadeLeft>
         </v-col>
@@ -76,6 +74,17 @@ export default {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 425px) {
+  .about-img {
+    text-align: center;
+  }
+
+  #about h2 {
+    text-align: center;
   }
 }
 </style>

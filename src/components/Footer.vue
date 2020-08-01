@@ -4,22 +4,22 @@
       <v-btn
         href="https://github.com/meg-engineer"
         target="_blank"
-        class="ma-2"
         color="black"
+        class="mx-5"
         text
         icon
       >
-        <v-icon class="mx-10 mt-5">fab fa-github</v-icon>
+        <v-icon>fab fa-github</v-icon>
       </v-btn>
       <v-btn
         href="https://twitter.com/MegEngineer"
         target="_blank"
-        class="ma-2"
         color="rgb(29,161,242)"
+        class="mx-5"
         text
         icon
       >
-        <v-icon class="mx-10 mt-5">fab fa-twitter</v-icon>
+        <v-icon>fab fa-twitter</v-icon>
       </v-btn>
     </v-row>
     <p>© 2020 Meg</p>

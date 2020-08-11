@@ -63,20 +63,6 @@ export default {
   line-height: 1.8;
 }
 
-.fadeIn {
-  animation: fadeIn 2s;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
 /* レスポンシブ */
 @media screen and (max-width: 425px) {
   .about-img {

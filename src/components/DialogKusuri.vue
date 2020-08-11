@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog v-model="dialogKusuri" width="500">
       <v-card>
         <v-card-title>Kusuri</v-card-title>
         <v-card-text>
@@ -24,7 +24,7 @@
 
           <v-spacer></v-spacer>
 
-          <v-btn color="primary" text @click="dialog = false">閉じる</v-btn>
+          <v-btn color="primary" text @click="close()">閉じる</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -34,47 +34,27 @@
 export default {
   data() {
     return {
-      dialog: false
+      dialogKusuri: false
     };
   },
   methods: {
     open() {
-      this.dialog = true;
+      this.dialogKusuri = true;
     },
     close() {
-      this.dialog = false;
+      this.dialogKusuri = false;
     }
   }
 };
 </script>
 <style scoped>
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-.btn,
-a.btn,
-button.btn {
+.btn {
   font-size: 0.9rem;
   font-weight: 700;
   position: relative;
   display: inline-block;
   padding: 0.7rem 1.5rem;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-align: center;
   vertical-align: middle;
@@ -86,9 +66,7 @@ button.btn {
 
 a.btn-malformation {
   font-size: 0.9rem;
-
   padding: 0.7rem 1.5rem;
-
   color: #fff;
   border-radius: 100% 80px / 80px 100%;
   background-color: #eb6100;

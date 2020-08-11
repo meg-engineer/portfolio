@@ -32,6 +32,10 @@
                           <v-avatar size="36"> <img :src="jsicon" /> </v-avatar
                           >JavaScript
                         </li>
+                        <li>
+                          <v-avatar size="36"> <img :src="tsicon" /> </v-avatar
+                          >TypeScript
+                        </li>
                       </ul>
 
                       <p class="text-left">フレームワーク</p>
@@ -122,6 +126,7 @@ export default {
       htmlicon: require("@/assets/img/icon/html.png"),
       cssicon: require("@/assets/img/icon/css.png"),
       jsicon: require("@/assets/img/icon/js.png"),
+      tsicon: require("@/assets/img/icon/ts.png"),
       jqicon: require("@/assets/img/icon/jq.png"),
       vueicon: require("@/assets/img/icon/vue.png"),
       xdicon: require("@/assets/img/icon/xd.png"),

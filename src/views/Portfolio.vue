@@ -2,101 +2,74 @@
   <div class="portfolio" id="portfolio">
     <h1>Portfolio</h1>
 
-    <article>これまでに開発したアプリ、Webデザイン制作物です。</article>
+    <article>これまでに開発したアプリです。</article>
 
     <v-container class="pa-4 text-center">
       <v-row class="fill-height" align="center" justify="center">
-        <template>
-          <v-col cols="12" md="4">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                :elevation="hover ? 12 : 2"
-                :class="{ 'on-hover': hover }"
-                @click="showDialogYatta()"
-              >
-                <v-img :src="yattaimage" height="225px">
-                  <v-card-title class="title gray--text">
-                    <v-row
-                      class="fill-height flex-column"
-                      justify="space-between"
-                    >
-                      <p class="mt-4 subheading text-left">YATTA!</p>
+        <v-col cols="12" md="4">
+          <v-hover v-slot:default="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
+              @click="showDialogYatta()"
+            >
+              <v-img :src="yattaImage" height="225px">
+                <v-card-title class="gray--text mt-8 subheading text-left"
+                  >YATTA!</v-card-title
+                >
+                <v-card-subtitle
+                  class="ma-0 body-1 font-weight-thin font-italic text-left"
+                  >嬉しい出来事をカードにしてTwitterでシェアできるアプリ</v-card-subtitle
+                >
+              </v-img>
+              <yatta-dialog ref="dialogYatta"></yatta-dialog>
+            </v-card>
+          </v-hover>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-hover v-slot:default="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
+              @click="showDialogKusuri()"
+            >
+              <v-img :src="kusuriImage" height="225px">
+                <v-card-title class="white--text mt-8 subheading text-left"
+                  >Kusuri</v-card-title
+                >
+                <v-card-subtitle
+                  class="ma-0 body-1 font-weight-thin font-italic text-left white--text"
+                  >日々のクスッと笑える出来事をシェアできるアプリ</v-card-subtitle
+                >
+              </v-img>
+              <kusuri-dialog ref="dialogKusuri"></kusuri-dialog>
+            </v-card>
+          </v-hover>
+        </v-col>
 
-                      <div>
-                        <p
-                          class="ma-0 body-1 font-weight-thin font-italic text-left"
-                        >
-                          嬉しい出来事をカードにしてTwitterでシェアできるアプリ
-                        </p>
-                      </div>
-                    </v-row>
-                  </v-card-title>
-                </v-img>
-                <yatta-dialog ref="dialogYatta"></yatta-dialog>
-              </v-card>
-            </v-hover>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                :elevation="hover ? 12 : 2"
-                :class="{ 'on-hover': hover }"
-                @click="showDialog()"
-              >
-                <v-img :src="kusuriimage" height="225px">
-                  <v-card-title class="title white--text">
-                    <v-row
-                      class="fill-height flex-column"
-                      justify="space-between"
-                    >
-                      <p class="mt-4 subheading text-left">Kusuri</p>
-
-                      <div>
-                        <p
-                          class="ma-0 body-1 font-weight-thin font-italic text-left"
-                        >
-                          日々のクスッと笑える出来事をシェアできるアプリ
-                        </p>
-                      </div>
-                    </v-row>
-                  </v-card-title>
-                </v-img>
-                <app-dialog ref="dialog"></app-dialog>
-              </v-card>
-            </v-hover>
-          </v-col>
-
-          <v-col cols="12" md="4">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                :elevation="hover ? 12 : 2"
-                :class="{ 'on-hover': hover }"
-                @click="showDialogPortfolio()"
-              >
-                <v-img :src="siteimage" height="225px">
-                  <v-card-title class="title gray--text">
-                    <v-row
-                      class="fill-height flex-column"
-                      justify="space-between"
-                    >
-                      <p class="mt-4 subheading text-left">
-                        ポートフォリオサイト
-                      </p>
-                    </v-row>
-                  </v-card-title>
-                </v-img>
-                <po-dialog ref="dialogPortfolio"></po-dialog>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </template>
+        <v-col cols="12" md="4">
+          <v-hover v-slot:default="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
+              @click="showDialogPortfolio()"
+            >
+              <v-img :src="siteImage" height="225px">
+                <v-card-title class="gray--text mt-8 subheading text-left"
+                  >ポートフォリオサイト</v-card-title
+                >
+              </v-img>
+              <po-dialog ref="dialogPortfolio"></po-dialog>
+            </v-card>
+          </v-hover>
+        </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
 <script>
 import DialogYatta from "@/components/DialogYatta.vue";
-import Dialog from "@/components/DialogKusuri.vue";
+import DialogKusuri from "@/components/DialogKusuri.vue";
 import DialogPortfolio from "@/components/DialogPortfolio.vue";
 
 export default {
@@ -104,25 +77,25 @@ export default {
   data() {
     return {
       dialogYatta: false,
-      dialog: false,
+      dialogKusuri: false,
       dialogPortfolio: false,
-      kusuriimage: require("@/assets/img/kusuri.jpg"),
-      yattaimage: require("@/assets/img/yatta.png"),
-      siteimage: require("@/assets/img/home.jpg"),
+      kusuriImage: require("@/assets/img/kusuri.jpg"),
+      yattaImage: require("@/assets/img/yatta.png"),
+      siteImage: require("@/assets/img/home.jpg"),
       transparent: "rgba(0, 0, 0, 0)"
     };
   },
   components: {
     yattaDialog: DialogYatta,
-    appDialog: Dialog,
+    kusuriDialog: DialogKusuri,
     poDialog: DialogPortfolio
   },
   methods: {
     showDialogYatta() {
       this.$refs.dialogYatta.open();
     },
-    showDialog() {
-      this.$refs.dialog.open();
+    showDialogKusuri() {
+      this.$refs.dialogKusuri.open();
     },
     showDialogPortfolio() {
       this.$refs.dialogPortfolio.open();
@@ -148,13 +121,5 @@ export default {
   letter-spacing: 0.1em;
   line-height: 1.8;
   margin-bottom: 30px;
-}
-
-.v-card {
-  transition: opacity 0.6 ease-in-out;
-}
-
-.v-card:not(.on-hover) {
-  opacity: 0.4s;
 }
 </style>

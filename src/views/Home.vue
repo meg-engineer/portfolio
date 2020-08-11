@@ -1,6 +1,6 @@
 <template>
   <div class="home" id="home">
-    <v-parallax dark height="700" src="@/assets/img/home.jpg" class>
+    <v-parallax dark height="700" src="@/assets/img/home.jpg">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-4">Meg's Portfolio</h1>

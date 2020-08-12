@@ -8,11 +8,7 @@
       <v-row class="fill-height" align="center" justify="center">
         <v-col cols="12" md="4">
           <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-              @click="showDialogYatta()"
-            >
+            <v-card :elevation="hover ? 12 : 2" @click="showDialogYatta()">
               <v-img :src="yattaImage" height="225px">
                 <v-card-title class="gray--text mt-8 subheading text-left"
                   >YATTA!</v-card-title
@@ -28,11 +24,7 @@
         </v-col>
         <v-col cols="12" md="4">
           <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-              @click="showDialogKusuri()"
-            >
+            <v-card :elevation="hover ? 12 : 2" @click="showDialogKusuri()">
               <v-img :src="kusuriImage" height="225px">
                 <v-card-title class="white--text mt-8 subheading text-left"
                   >Kusuri</v-card-title
@@ -49,11 +41,7 @@
 
         <v-col cols="12" md="4">
           <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-              @click="showDialogPortfolio()"
-            >
+            <v-card :elevation="hover ? 12 : 2" @click="showDialogPortfolio()">
               <v-img :src="siteImage" height="225px">
                 <v-card-title class="gray--text mt-8 subheading text-left"
                   >ポートフォリオサイト</v-card-title

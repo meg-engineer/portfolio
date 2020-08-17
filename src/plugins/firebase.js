@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAXqv-1VM0FqaUlwnvcOfgOR4I6G9FetG0",
-  authDomain: "portfolio-f01a5.firebaseapp.com",
-  databaseURL: "https://portfolio-f01a5.firebaseio.com",
-  projectId: "portfolio-f01a5",
-  storageBucket: "portfolio-f01a5.appspot.com",
-  messagingSenderId: "282847632069",
-  appId: "1:282847632069:web:36443ca4bbb6d1af876eac",
-  measurementId: "G-WVCB73WGFH"
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_DATABASE_URL,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_APP_ID,
+  measurementId: process.env.VUE_APP_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);

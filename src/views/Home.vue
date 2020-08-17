@@ -16,12 +16,6 @@ export default {
 };
 </script>
 <style scoped>
-.title {
-  font-size: 100em;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
-}
-
 h1 {
   color: gray;
 }

@@ -18,6 +18,7 @@
           <a
             href="https://yatta.tokyo/"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn btn-malformation"
             >アプリを見る</a
           >
@@ -48,31 +49,17 @@ export default {
 
 <style scoped>
 .btn {
-  font-size: 0.9rem;
-  font-weight: 700;
-  position: relative;
   display: inline-block;
-  padding: 0.7rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
+  padding: 0.3em 1em;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
 }
 
-a.btn-malformation {
-  font-size: 0.9rem;
-  padding: 0.7rem 1.5rem;
-  color: #fff;
-  border-radius: 100% 80px / 80px 100%;
-  background-color: #eb6100;
-}
-
-a.btn-malformation:hover {
-  color: #fff;
-  border-radius: 60% 80% / 100% 80%;
+.btn:hover {
+  background: #67c5ff;
+  color: white;
 }
 </style>

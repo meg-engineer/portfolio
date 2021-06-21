@@ -6,7 +6,23 @@
 
     <v-container class="pa-4 text-center">
       <v-row class="fill-height" align="center" justify="center">
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="3">
+          <v-hover v-slot:default="{ hover }">
+            <v-card :elevation="hover ? 12 : 2" @click="showDialogBlog()">
+              <v-img :src="blogImage" height="225px">
+                <v-card-title class="gray--text mt-8 subheading text-left"
+                  >ブログ</v-card-title
+                >
+                <v-card-subtitle
+                  class="ma-0 body-1 font-weight-thin font-italic text-left"
+                  >個人ブログ</v-card-subtitle
+                >
+              </v-img>
+              <blog-dialog ref="dialogBlog"></blog-dialog>
+            </v-card>
+          </v-hover>
+        </v-col>
+        <v-col cols="12" md="3">
           <v-hover v-slot:default="{ hover }">
             <v-card :elevation="hover ? 12 : 2" @click="showDialogYatta()">
               <v-img :src="yattaImage" height="225px">
@@ -22,7 +38,7 @@
             </v-card>
           </v-hover>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="3">
           <v-hover v-slot:default="{ hover }">
             <v-card :elevation="hover ? 12 : 2" @click="showDialogKusuri()">
               <v-img :src="kusuriImage" height="225px">
@@ -39,7 +55,7 @@
           </v-hover>
         </v-col>
 
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="3">
           <v-hover v-slot:default="{ hover }">
             <v-card :elevation="hover ? 12 : 2" @click="showDialogPortfolio()">
               <v-img :src="siteImage" height="225px">
@@ -56,6 +72,7 @@
   </div>
 </template>
 <script>
+import DialogBlog from "@/components/DialogBlog.vue";
 import DialogYatta from "@/components/DialogYatta.vue";
 import DialogKusuri from "@/components/DialogKusuri.vue";
 import DialogPortfolio from "@/components/DialogPortfolio.vue";
@@ -64,9 +81,11 @@ export default {
   name: "portfolio",
   data() {
     return {
+      dialogBlog: false,
       dialogYatta: false,
       dialogKusuri: false,
       dialogPortfolio: false,
+      blogImage: require("@/assets/img/blog.jpg"),
       kusuriImage: require("@/assets/img/kusuri.jpg"),
       yattaImage: require("@/assets/img/yatta.png"),
       siteImage: require("@/assets/img/home.jpg"),
@@ -74,11 +93,15 @@ export default {
     };
   },
   components: {
+    blogDialog: DialogBlog,
     yattaDialog: DialogYatta,
     kusuriDialog: DialogKusuri,
     poDialog: DialogPortfolio
   },
   methods: {
+    showDialogBlog() {
+      this.$refs.dialogBlog.open();
+    },
     showDialogYatta() {
       this.$refs.dialogYatta.open();
     },

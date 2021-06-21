@@ -20,7 +20,7 @@
       <AppNavigation />
     </div>
     <About />
-    <portfolio />
+    <Portfolio />
     <Skill />
     <Contact />
     <!-- スクロールしたらFooter固定 -->

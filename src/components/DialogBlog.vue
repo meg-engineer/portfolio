@@ -1,30 +1,28 @@
 <template>
   <div>
-    <v-dialog v-model="dialogKusuri" width="500">
+    <v-dialog v-model="dialogBlog" width="500">
       <v-card>
-        <v-card-title>Kusuri</v-card-title>
+        <v-card-title>ブログ</v-card-title>
         <v-card-text>
-          日々のクスッと笑えるできごとをシェアできるチャットアプリです。
+          個人ブログです。
           <br />
           <br />開発環境
           <ul>
             <li>OS : mac</li>
             <li>言語 : HTML,CSS,JavaScript</li>
-            <li>FW : Vue.js,Vuex,Vuetify</li>
-            <li>DB : Firebase</li>
+            <li>ライブラリ : Next.js,TailwindCSS,DaisyUI</li>
+            <li>CMS : Contentful</li>
           </ul>
         </v-card-text>
         <v-card-actions>
           <a
-            href="https://kusuri-chat.web.app/"
+            href="https://next-contentful-vert.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-malformation"
             >アプリを見る</a
           >
-
           <v-spacer></v-spacer>
-
           <v-btn color="primary" text @click="close()">閉じる</v-btn>
         </v-card-actions>
       </v-card>
@@ -35,19 +33,20 @@
 export default {
   data() {
     return {
-      dialogKusuri: false
+      dialogBlog: false
     };
   },
   methods: {
     open() {
-      this.dialogKusuri = true;
+      this.dialogBlog = true;
     },
     close() {
-      this.dialogKusuri = false;
+      this.dialogBlog = false;
     }
   }
 };
 </script>
+
 <style scoped>
 .btn {
   display: inline-block;

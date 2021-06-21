@@ -12,48 +12,41 @@
                     class="fill-height flex-column"
                     justify="space-between"
                   >
-                    <v-title class="subheading text-left mb-8"
-                      >フロントエンド</v-title
-                    >
-
-                    <v-text>
-                      <p class="text-left">言語</p>
-                      <ul class="font-weight-light mb-6">
-                        <li>
-                          <v-avatar size="36">
-                            <img :src="htmlicon" /> </v-avatar
-                          >HTML5
-                        </li>
-                        <li>
-                          <v-avatar size="36"> <img :src="cssicon" /> </v-avatar
-                          >CSS
-                        </li>
-                        <li>
-                          <v-avatar size="36"> <img :src="jsicon" /> </v-avatar
-                          >JavaScript
-                        </li>
-                        <li>
-                          <v-avatar size="36"> <img :src="tsicon" /> </v-avatar
-                          >TypeScript
-                        </li>
-                      </ul>
-
-                      <p class="text-left">フレームワーク</p>
-                      <ul class="font-weight-light">
-                        <li>
-                          <v-avatar size="36"> <img :src="jqicon" /> </v-avatar
-                          >jQuery
-                        </li>
-                        <li>
-                          <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
-                          >Vue.js
-                        </li>
-                        <li>
-                          <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
-                          >Vuex
-                        </li>
-                      </ul>
-                    </v-text>
+                    <p class="subheading text-left mb-8">フロントエンド</p>
+                    <ul class="font-weight-light mb-6">
+                      <li>
+                        <v-avatar size="36"> <img :src="htmlicon" /> </v-avatar
+                        >HTML5
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="cssicon" /> </v-avatar
+                        >CSS
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="jsicon" /> </v-avatar
+                        >JavaScript
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="tsicon" /> </v-avatar
+                        >TypeScript
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="reacticon" /> </v-avatar
+                        >React
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="nexticon" /> </v-avatar
+                        >Next.js
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
+                        >Vue.js
+                      </li>
+                      <li>
+                        <v-avatar size="36"> <img :src="vueicon" /> </v-avatar
+                        >Vuex
+                      </li>
+                    </ul>
                   </v-row>
                 </v-card-title>
               </v-card>
@@ -127,7 +120,8 @@ export default {
       cssicon: require("@/assets/img/icon/css.png"),
       jsicon: require("@/assets/img/icon/js.png"),
       tsicon: require("@/assets/img/icon/ts.png"),
-      jqicon: require("@/assets/img/icon/jq.png"),
+      reacticon: require("@/assets/img/icon/react.png"),
+      nexticon: require("@/assets/img/icon/next.png"),
       vueicon: require("@/assets/img/icon/vue.png"),
       xdicon: require("@/assets/img/icon/xd.png"),
       psicon: require("@/assets/img/icon/ps.png"),
